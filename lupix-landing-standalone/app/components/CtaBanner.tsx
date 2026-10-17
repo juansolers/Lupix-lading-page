@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export default function CtaBanner() {
   return (
     <section id="cta" className="bg-lupix-violet py-20">
@@ -9,15 +11,19 @@ export default function CtaBanner() {
           Juega gratis hoy: te damos el texto y la palabra, tú pones los
           puntos.
         </p>
-        <div className="mt-8">
-          <a
-            href="#"
-            className="inline-block rounded-full bg-white px-8 py-4 text-base font-bold text-lupix-violet shadow-lg transition hover:bg-lupix-yellow"
-          >
-            Jugar gratis
-          </a>
+        <div className="mt-8 rounded-2xl bg-white p-6 text-left shadow-xl md:p-8">
+          <div
+            className="hs-form-frame"
+            data-region="na1"
+            data-form-id="400fd01b-e6b2-4771-917d-23867c283180"
+            data-portal-id="52180194"
+          />
         </div>
       </div>
+      <Script
+        src="https://js.hsforms.net/forms/embed/52180194.js"
+        strategy="afterInteractive"
+      />
     </section>
   );
 }
