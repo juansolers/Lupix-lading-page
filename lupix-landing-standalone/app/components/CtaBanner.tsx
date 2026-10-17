@@ -11,7 +11,17 @@ export default function CtaBanner() {
           Juega gratis hoy: te damos el texto y la palabra, tú pones los
           puntos.
         </p>
-        <div className="mt-8 rounded-2xl bg-white p-6 text-left shadow-xl md:p-8">
+        <a
+          id="btn-cta-principal"
+          href="#form-inscripcion"
+          className="mt-8 inline-block rounded-full bg-white px-8 py-4 text-base font-bold text-lupix-violet shadow-lg transition hover:bg-lupix-yellow"
+        >
+          Inscribirme
+        </a>
+        <div
+          id="form-inscripcion"
+          className="mt-8 rounded-2xl bg-white p-6 text-left shadow-xl md:p-8"
+        >
           <div
             className="hs-form-frame"
             data-region="na1"
