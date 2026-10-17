@@ -1,4 +1,12 @@
+"use client";
+
 import Script from "next/script";
+
+declare global {
+  interface Window {
+    dataLayer?: Array<Record<string, unknown>>;
+  }
+}
 
 export default function CtaBanner() {
   return (
@@ -14,6 +22,16 @@ export default function CtaBanner() {
         <a
           id="btn-cta-principal"
           href="#form-inscripcion"
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: "clic_cta_principal_custom",
+                cta_text: "Inscribirme",
+                cta_location: "banner_principal",
+              });
+            }
+          }}
           className="mt-8 inline-block rounded-full bg-white px-8 py-4 text-base font-bold text-lupix-violet shadow-lg transition hover:bg-lupix-yellow"
         >
           Inscribirme
