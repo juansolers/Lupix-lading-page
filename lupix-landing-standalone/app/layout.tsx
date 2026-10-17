@@ -31,6 +31,15 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${nunito.variable} bg-lupix-bg text-lupix-ink antialiased`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PLZZXZRT"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6HRD9DCX49"
           strategy="afterInteractive"
@@ -41,15 +50,6 @@ function gtag(){window.dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-6HRD9DCX49');`}
         </Script>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PLZZXZRT"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-            title="Google Tag Manager"
-          />
-        </noscript>
         <Script id="google-tag-manager" strategy="beforeInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
